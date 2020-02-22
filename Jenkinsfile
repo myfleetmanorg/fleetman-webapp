@@ -25,8 +25,8 @@ pipeline {
 
       stage('Build and Push Image') {
          steps {
-           sh 'docker image build -t ${REPO_URL} .'
-            docker push ${ECR_REGISTRY}
+           sh 'docker image build -t ${REPOSITORY_TAG} .'
+            docker push ${REPO_URL}
          }
       }
 
