@@ -25,7 +25,7 @@ pipeline {
 
       stage('Build and Push Image') {
          steps {
-           sh 'docker image build -t "ssumathe/myfleetmanorg-fleetman-webapp:1.1"'
+           sh 'docker image build -t ssumathe/myfleetmanorg-fleetman-webapp:1.1 .'
            sh 'docker push ${REPO_URL}'
          }
       }
